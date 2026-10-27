@@ -1,22 +1,6 @@
 import {
-  backend,
-  css,
-  docker,
-  figma,
-  git,
-  html,
-  javascript,
-  mobile,
-  mongodb,
-  nextjs,
-  nodejs,
   reactjs,
-  redux,
   smartcorner,
-  tailwind,
-  threejs,
-  typescript,
-  web,
   shareMe,
   portfolioForDesigner,
   storiesApp,
@@ -34,7 +18,15 @@ export const navLinks = [
   },
   {
     id: "work",
-    title: "Work",
+    title: "Experience",
+  },
+  {
+    id: "skills",
+    title: "Skills",
+  },
+  {
+    id: "education",
+    title: "Education",
   },
   {
     id: "contact",
@@ -42,133 +34,69 @@ export const navLinks = [
   },
 ];
 
-const services = [
-  {
-    title: "Frond-End Development",
-    icon: web,
-  },
-  {
-    title: "Back-End Development",
-    icon: mobile,
-  },
-  {
-    title: "Full-Stack Development",
-    icon: backend,
-  },
-];
-
-const technologies = [
-  {
-    name: "HTML 5",
-    icon: html,
-  },
-  {
-    name: "CSS 3",
-    icon: css,
-  },
-  {
-    name: "JavaScript",
-    icon: javascript,
-  },
-  {
-    name: "TypeScript",
-    icon: typescript,
-  },
-  {
-    name: "React JS",
-    icon: reactjs,
-  },
-  {
-    name: "Redux Toolkit",
-    icon: redux,
-  },
-  {
-    name: "Tailwind CSS",
-    icon: tailwind,
-  },
-  {
-    name: "Node JS",
-    icon: nodejs,
-  },
-  {
-    name: "MongoDB",
-    icon: mongodb,
-  },
-  {
-    name: "Three JS",
-    icon: threejs,
-  },
-  {
-    name: "git",
-    icon: git,
-  },
-  {
-    name: "figma",
-    icon: figma,
-  },
-  {
-    name: "docker",
-    icon: docker,
-  },
+const skillGroups = [
+  { title: "Languages & Web", skills: ["JavaScript (ES6+)", "TypeScript", "HTML5", "CSS3", "SCSS"] },
+  { title: "Frontend", skills: ["React", "Next.js", "Redux Toolkit", "Zustand", "TanStack Query", "Material UI", "Ant Design"] },
+  { title: "Backend", skills: ["Node.js", "Express.js", "REST APIs", "OAuth 2.0"] },
+  { title: "AI & LLM Integrations", skills: ["LLM API integration", "Large language models", "Model Context Protocol (MCP)", "AI-powered automation"] },
+  { title: "Databases", skills: ["MongoDB", "PostgreSQL", "MySQL", "Redis"] },
+  { title: "Cloud & DevOps", skills: ["AWS Lambda", "Amazon S3", "Amazon SQS", "Amazon EventBridge", "Docker", "CI/CD", "GitHub Actions"] },
+  { title: "Testing & Tools", skills: ["Jest", "Cypress", "Git", "Webpack", "Core Web Vitals"] },
 ];
 
 const experiences = [
   {
-    title: "JavaScript Developer",
-    company_name: "Freelance",
-    icon: reactjs,
-    iconBg: "#383E56",
-    date: "Sep 2019 - Jan 2020",
+    title: "Full-Stack Software Engineer · Contractor",
+    company_name: "Exploding Topics (Backlinko / Semrush)",
+    iconText: "ET",
+    iconBg: "#1d1836",
+    date: "Jun 2023 - Present · Remote, Armenia",
     points: [
-      "Developed a robust and intuitive CRM system tailored for a large-scale e-commerce platform. The application aids in tracking customer interactions, leads, and sales, ensuring improved customer service and business growth",
-      "Integrated Redux with React to effectively manage the application's state, enabling real-time updates and efficient data flow across components.",
-      "Leveraged TypeScript to add static typing, which improved code maintainability, prevented potential runtime errors, and ensured robustness.",
-      "Collaborated with the design team to ensure a responsive and consistent user experience across various devices and screen sizes.",
-      "Implemented unit and integration tests using Jest and React Testing Library, achieving 95% code coverage.",
+      "Built React and Next.js trend directories and website analytics interfaces, expanding the analytics catalogue by 10,000+ unique domains.",
+      "Shipped three paid API packages with team entitlements and corrected credit accounting for cached API responses.",
+      "Removed 18 seconds of fixed delay from uncached social-channel analysis by parallelizing nine external lookups.",
+      "Engineered a trend-data ingestion pipeline for three external providers with weighted queues, concurrency controls, retries, and timeouts.",
+      "Improved reliability with CMS response caching, webhook-driven invalidation, and resumable monthly analytics jobs.",
+      "Integrated LLM APIs for topic moderation and data enrichment, and developed nine TypeScript MCP tools for AI-assisted market research.",
     ],
   },
   {
-    title: "React.js Developer",
+    title: "React Developer · Full-time",
+    company_name: "Actual Solutions",
+    icon: reactjs,
+    iconBg: "#1d1836",
+    date: "Sep 2023 - May 2025 · Yerevan, Armenia",
+    points: [
+      "Delivered React and TypeScript interfaces for healthcare billing and patient-management workflows, including insurance verification, claims, payments, and patient records.",
+      "Built complex patient and insurance forms with React Hook Form, Yup, and Zod.",
+      "Developed reusable Ant Design and Material UI components, including a themed library documented in Storybook.",
+      "Implemented URL-based filtering, sorting, and pagination for healthcare records, preserving search context across navigation.",
+      "Integrated REST APIs with TanStack Query and Axios, including record refreshes, document uploads, and spreadsheet import/export.",
+    ],
+  },
+  {
+    title: "Full-Stack Developer · Full-time",
     company_name: "Smart Corner",
     icon: smartcorner,
     iconBg: "#ffffff",
-    date: "Feb 2020 - Mar 2023",
+    date: "Sep 2020 - Aug 2023 · Yerevan, Armenia",
     points: [
-      "Developing and maintaining web applications using React. This has involved creating new features, fixing bugs, and optimizing performance.",
-      "Working on maps for adding stop points and creating tours between several stop points, optimize tours and provide more details about that",
-      "Working on charts, creating different types of dynamic charts (2D, 3D), related to changing and receiving data. Implementing features filtration and aggregation for chart data.",
-      "Working with grid tables, which include a lot of data. Filtering and sorting received data dynamically",
-      "Working with big (huge) data, implementing features for those dynamically filtering and sorting",
-      "Implementing a feature for creating javascript expressions using Blockly library, then from those expressions generating XML for use by android developers",
-      "Working with calendars, data reports, dashboards and with other different kinds of features",
+      "Built mapping and multi-stop route-planning features for ginstr web, an enterprise business-data platform.",
+      "Developed interactive 2D and 3D visualizations, data-intensive grids, dashboards, calendars, and reports with dynamic filtering and aggregation.",
+      "Built a visual JavaScript expression editor with Blockly that generated XML configurations for Android applications.",
+      "Developed Node.js and Express REST endpoints with validation and error handling, plus database queries for server-side search, sorting, and pagination.",
+      "Improved reliability through debugging, refactoring, and automated testing with Cypress.",
     ],
   },
   {
-    title: "NextJS Developer",
-    company_name: "Freelance",
-    icon: nextjs,
-    iconBg: "#E6DEDD",
-    date: "Apr 2023 - Jul 2023",
+    title: "Freelance JavaScript Developer",
+    company_name: "Self-Employed",
+    iconText: "JS",
+    iconBg: "#1d1836",
+    date: "Sep 2016 - Jul 2018 · Yerevan, Armenia",
     points: [
-      "Built an e-commerce platform optimized for SEO and performance. With the use of NextJS, ensured faster page loads, resulting in an increased conversion rate and enhanced user experience.",
-      "Utilized NextJS for server-side rendering, dramatically improving the website's SEO ranking and initial load time",
-      "Implemented dynamic routing to cater to hundreds of product categories and thousands of individual product pages.",
-      "Integrated a secure and efficient payment gateway, ensuring seamless transactions.",
-      "Leveraged NextJS's API routes for building lightweight backend functionality like user authentication and order processing.",
-    ],
-  },
-  {
-    title: "NodeJS Developer",
-    company_name: "Freelance",
-    icon: nodejs,
-    iconBg: "#E6DEDD",
-    date: "Oug 2023 - Present",
-    points: [
-      "Engineered a scalable and real-time chat application catering to over 10,000 active users. This platform provides users with instant messaging capabilities, group chats, media sharing, and notifications.",
-      "Used Express.js for building RESTful APIs, handling user authentication, message storage, and retrieval functionalities.",
-      "Integrated WebSocket with the Express.js backend to enable real-time messaging capabilities.",
-      "Transitioned to NestJS mid-project to leverage its modular architecture and robust ecosystem, resulting in improved code scalability and maintainability.",
-      "Worked closely with the database team to optimize database queries, ensuring swift retrieval of chat histories and user data.",
+      "Developed responsive web applications with JavaScript, React, HTML, and CSS for independent clients.",
+      "Built reusable UI components and independently handled feature development, debugging, and frontend improvements.",
     ],
   },
 ];
@@ -282,4 +210,4 @@ const projects = [
   },
 ];
 
-export { services, technologies, experiences, testimonials, projects };
+export { skillGroups, experiences, testimonials, projects };
