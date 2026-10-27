@@ -36,9 +36,9 @@ const Contact = () => {
         import.meta.env.VITE_APP_EMAILJS_TEMPLATE_ID,
         {
           from_name: form.name,
-          to_name: "Full-Stack Developer",
+          to_name: "Narek Hovhannisyan",
           from_email: form.email,
-          to_email: "hovhannisyannarek96freelancer@gmail.com",
+          to_email: "hovhannisyannarek96@gmail.com",
           message: form.message,
         },
         import.meta.env.VITE_APP_EMAILJS_PUBLIC_KEY
@@ -73,6 +73,11 @@ const Contact = () => {
       >
         <p className={styles.sectionSubText}>Get in touch</p>
         <h3 className={styles.sectionHeadText}>Contact.</h3>
+        <p className='mt-4 text-secondary'>Yerevan, Armenia</p>
+        <div className='mt-3 flex flex-wrap gap-x-6 gap-y-2'>
+          <a className='text-[#fce44d] underline' href='mailto:hovhannisyannarek96@gmail.com'>Email me</a>
+          <a className='text-[#fce44d] underline' href='https://www.linkedin.com/in/hovhannisyannarek96/' target='_blank' rel='noopener noreferrer'>LinkedIn</a>
+        </div>
 
         <form
           ref={formRef}
